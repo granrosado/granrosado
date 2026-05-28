@@ -24,7 +24,6 @@
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
     .nav-cta { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--warm); background: var(--dark); padding: 11px 26px; transition: background 0.3s; }
     .nav-cta:hover { background: var(--gold); }
-
     .hero-split { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
     .hero-left { background: var(--dark); padding: 140px 60px 80px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
     .hero-left::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 70%, rgba(200,169,110,0.07) 0%, transparent 60%); }
@@ -32,9 +31,8 @@
     .hero-title { font-family: var(--serif); font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 300; line-height: 1.0; color: var(--warm); position: relative; z-index: 1; opacity: 0; animation: fadeUp 1s ease 0.5s forwards; }
     .hero-title em { font-style: italic; color: var(--gold); display: block; }
     .hero-right { position: relative; overflow: hidden; opacity: 0; animation: fadeIn 1.4s ease 0.2s forwards; }
-    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
     .hero-right::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to left, transparent 60%, var(--dark) 100%); }
-
     .manifiesto { padding: 120px 60px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 100px; align-items: center; }
     .manifiesto-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     .manifiesto-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 300; line-height: 1.15; }
@@ -42,7 +40,6 @@
     .manifiesto-text { font-size: 0.92rem; line-height: 2; color: var(--mid); }
     .manifiesto-text p { margin-bottom: 20px; }
     .manifiesto-firma { font-family: var(--serif); font-size: 1.4rem; font-style: italic; color: var(--gold); margin-top: 36px; }
-
     .valores { background: var(--cream); padding: 100px 60px; }
     .sec-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .sec-title { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; }
@@ -54,7 +51,6 @@
     .valor-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: rgba(200,169,110,0.25); line-height: 1; margin-bottom: 20px; }
     .valor-title { font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dark); margin-bottom: 14px; }
     .valor-desc { font-size: 0.84rem; line-height: 1.8; color: var(--mid); }
-
     .taller { padding: 100px 60px; background: var(--dark); }
     .taller-header { margin-bottom: 48px; }
     .taller-header .sec-label { color: var(--gold); }
@@ -66,8 +62,6 @@
     .taller-img:first-child img { height: 560px; }
     .taller-img:not(:first-child) img { height: 268px; }
     .taller-img:hover img { transform: scale(1.04); filter: brightness(0.95); }
-
-    /* FAQ CON CATEGORIAS */
     .faq { background: var(--dark); padding: 100px 0; border-top: 1px solid rgba(250,248,244,0.06); }
     .faq-inner { display: grid; grid-template-columns: 260px 1fr; gap: 0; }
     .faq-sidebar { padding: 0 40px 0 60px; position: sticky; top: 100px; align-self: start; }
@@ -76,16 +70,12 @@
     .faq-cat { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,248,244,0.35); padding: 10px 0; background: none; border: none; cursor: pointer; font-family: var(--sans); text-align: left; border-bottom: 1px solid rgba(250,248,244,0.06); transition: color 0.2s; }
     .faq-cat:hover { color: rgba(250,248,244,0.7); }
     .faq-cat.active { color: var(--gold); }
-
-    .faq-content { padding: 0 60px 0 0; border-left: 1px solid rgba(250,248,244,0.08); padding-left: 60px; }
+    .faq-content { padding: 0 60px 0 60px; border-left: 1px solid rgba(250,248,244,0.08); }
     .faq-header { margin-bottom: 48px; }
     .faq-header .sec-label { color: var(--gold); }
     .faq-header .sec-title { color: var(--warm); }
-    .faq-count { font-size: 0.62rem; letter-spacing: 0.14em; color: rgba(250,248,244,0.25); margin-top: 8px; }
-
     .faq-group { display: none; }
     .faq-group.active { display: block; }
-
     .faq-item { border-top: 1px solid rgba(250,248,244,0.08); }
     .faq-item:last-child { border-bottom: 1px solid rgba(250,248,244,0.08); }
     .faq-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 24px 0; background: none; border: none; cursor: pointer; text-align: left; gap: 20px; }
@@ -94,7 +84,6 @@
     .faq-item.open .faq-icon { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     .faq-a p { font-size: 0.85rem; line-height: 1.85; color: rgba(250,248,244,0.45); padding-bottom: 24px; padding-right: 40px; }
-
     .cta-final { padding: 120px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .cta-title { font-family: var(--serif); font-size: clamp(2.5rem, 4.5vw, 4.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 20px; }
     .cta-title em { font-style: italic; color: var(--gold); }
@@ -102,7 +91,6 @@
     .btn-primary { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--warm); background: var(--dark); padding: 15px 34px; display: inline-block; transition: background 0.3s; margin-right: 12px; margin-bottom: 12px; }
     .btn-primary:hover { background: var(--gold); }
     .btn-ghost { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--mid); display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; }
-    .btn-ghost:hover { color: var(--dark); }
     .contacto-info { display: flex; flex-direction: column; }
     .contacto-item { display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-bottom: 1px solid var(--line); }
     .contacto-item:first-child { border-top: 1px solid var(--line); }
@@ -110,7 +98,6 @@
     .contacto-val { font-size: 0.9rem; color: var(--mid); }
     .contacto-val a { color: var(--mid); text-decoration: none; transition: color 0.3s; }
     .contacto-val a:hover { color: var(--dark); }
-
     footer { background: var(--dark); padding: 60px; }
     .footer-simple { display: flex; justify-content: space-between; align-items: center; }
     .footer-legal { font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(250,248,244,0.3); }
@@ -149,7 +136,25 @@
       .taller-grid { grid-template-columns: 1fr; }
       .footer-simple { flex-direction: column; gap: 20px; text-align: center; }
     }
+    .nav-mobile { display: none; }
+@media(max-width:640px) {
+  .nav-links { display: none; }
+  .nav-mobile { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--dark); border-top: 1px solid rgba(250,248,244,0.08); padding: 0; height: 58px; }
+  .nav-mobile a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: rgba(250,248,244,0.4); gap: 4px; transition: color 0.2s; }
+  .nav-mobile a:hover, .nav-mobile a.active { color: var(--gold); }
+  .nav-mobile svg { width: 18px; height: 18px; }
+  body { padding-bottom: 58px; }
+  .wa-float { bottom: 70px; }
+}
   </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQM0Q54BCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQM0Q54BCX');
+</script>
 </head>
 <body>
 
@@ -162,6 +167,7 @@
     <li><a href="medida.html">A Medida</a></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
   </ul>
   <a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!" class="nav-cta" target="_blank">Consultar</a>
 </nav>
@@ -172,7 +178,7 @@
     <h1 class="hero-title">Hacemos<br>muebles con<br><em>alma.</em></h1>
   </div>
   <div class="hero-right">
-    <img src="img/20250317_085939.jpg" alt="Taller Gran Rosado" style="object-position: center 25%;" />
+    <img src="img/20250317_085939.jpg" alt="Taller Gran Rosado" />
   </div>
 </section>
 
@@ -197,36 +203,12 @@
     <h2 class="sec-title">Nuestros <em>valores</em></h2>
   </div>
   <div class="valores-grid">
-    <div class="valor-card reveal">
-      <div class="valor-num">01</div>
-      <div class="valor-title">Madera real</div>
-      <p class="valor-desc">Solo trabajamos con madera maciza y enchapados nobles. Nada de melamina pura, nada de imitaciones.</p>
-    </div>
-    <div class="valor-card reveal">
-      <div class="valor-num">02</div>
-      <div class="valor-title">Fabricación propia</div>
-      <p class="valor-desc">Todo se hace en nuestro taller. Carpintería y herrería bajo el mismo techo. Controlamos cada etapa.</p>
-    </div>
-    <div class="valor-card reveal">
-      <div class="valor-num">03</div>
-      <div class="valor-title">Diseño sin límites</div>
-      <p class="valor-desc">Si lo podés imaginar, lo podemos hacer. Con planos, ideas en papel o una foto de referencia.</p>
-    </div>
-    <div class="valor-card reveal">
-      <div class="valor-num">04</div>
-      <div class="valor-title">Precio transparente</div>
-      <p class="valor-desc">El precio que acordamos es el precio que pagás. Sin sorpresas, sin costos ocultos.</p>
-    </div>
-    <div class="valor-card reveal">
-      <div class="valor-num">05</div>
-      <div class="valor-title">Garantía real</div>
-      <p class="valor-desc">Garantía estructural de por vida. Si algo falla por defecto de fabricación, lo resolvemos.</p>
-    </div>
-    <div class="valor-card reveal">
-      <div class="valor-num">06</div>
-      <div class="valor-title">Entrega GBA y CABA</div>
-      <p class="valor-desc">Coordinamos la entrega con nuestro flete de confianza. Tu mueble llega listo para estrenar.</p>
-    </div>
+    <div class="valor-card reveal"><div class="valor-num">01</div><div class="valor-title">Madera real</div><p class="valor-desc">Solo trabajamos con madera maciza y enchapados nobles. Nada de melamina pura, nada de imitaciones.</p></div>
+    <div class="valor-card reveal"><div class="valor-num">02</div><div class="valor-title">Fabricación propia</div><p class="valor-desc">Todo se hace en nuestro taller. Carpintería y herrería bajo el mismo techo. Controlamos cada etapa.</p></div>
+    <div class="valor-card reveal"><div class="valor-num">03</div><div class="valor-title">Diseño sin límites</div><p class="valor-desc">Si lo podés imaginar, lo podemos hacer. Con planos, ideas en papel o una foto de referencia.</p></div>
+    <div class="valor-card reveal"><div class="valor-num">04</div><div class="valor-title">Precio transparente</div><p class="valor-desc">El precio que acordamos es el precio que pagás. Sin sorpresas, sin costos ocultos.</p></div>
+    <div class="valor-card reveal"><div class="valor-num">05</div><div class="valor-title">Garantía real</div><p class="valor-desc">Garantía estructural de por vida. Si algo falla por defecto de fabricación, lo resolvemos.</p></div>
+    <div class="valor-card reveal"><div class="valor-num">06</div><div class="valor-title">Entrega GBA y CABA</div><p class="valor-desc">Coordinamos la entrega con nuestro flete de confianza. Tu mueble llega listo para estrenar.</p></div>
   </div>
 </section>
 
@@ -236,25 +218,15 @@
     <h2 class="sec-title" style="color:var(--warm);">Donde todo <em>empieza</em></h2>
   </div>
   <div class="taller-grid reveal">
-    <div class="taller-img">
-      <img src="img/20250531_140641.jpg" alt="Taller Gran Rosado" style="object-position: center 25%;" />
-    </div>
-    <div class="taller-img">
-      <img src="img/20250317_085926.jpg" alt="Proceso de fabricación" />
-    </div>
-    <div class="taller-img">
-      <img src="img/20250317_090254.jpg" alt="Detalle de madera" style="object-position: center 30%;" />
-    </div>
-    <div class="taller-img">
-      <img src="img/20250512_111940.jpg" alt="Taller en proceso" />
-    </div>
+    <div class="taller-img"><img src="img/20250531_140641.jpg" alt="Taller Gran Rosado" style="object-position: center 25%;" /></div>
+    <div class="taller-img"><img src="img/20250317_085926.jpg" alt="Proceso" /></div>
+    <div class="taller-img"><img src="img/20250317_090254.jpg" alt="Detalle" style="object-position: center 30%;" /></div>
+    <div class="taller-img"><img src="img/20250512_111940.jpg" alt="Taller" /></div>
   </div>
 </section>
 
-<!-- FAQ CON CATEGORIAS -->
 <section class="faq">
   <div class="faq-inner">
-
     <div class="faq-sidebar">
       <p class="faq-sidebar-label">Categorías</p>
       <div class="faq-cats">
@@ -265,131 +237,35 @@
         <button class="faq-cat" onclick="setFaqCat(this,'garantia')">Garantía y cuidados</button>
       </div>
     </div>
-
     <div class="faq-content">
       <div class="faq-header">
         <p class="sec-label">Todo lo que necesitás saber</p>
         <h2 class="sec-title" style="color:var(--warm);">Preguntas <em>frecuentes</em></h2>
       </div>
-
-      <!-- PROCESO -->
       <div class="faq-group active" id="faq-proceso">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Cuánto tarda en fabricarse un mueble?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Depende del producto. Las mesas tardan 30 días aproximadamente desde la confirmación y seña. Los muebles a medida tardan 30 días corridos. Las sillas dependen del modelo: entre 15 y 25 días corridos. Te confirmamos el plazo exacto al momento de confirmar el pedido.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Puedo hacer cambios una vez que empezó la fabricación?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Tenés 48 horas desde la confirmación del pedido para hacer cambios. Pasado ese tiempo, los cambios estructurales ya no son posibles porque el proceso de corte y ensamble ya arrancó. Por eso es clave definir todo bien antes de confirmar.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Cuánto tarda en fabricarse un mueble?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Depende del producto. Las mesas tardan 30 días aproximadamente desde la confirmación y seña. Los muebles a medida tardan 30 días corridos. Las sillas dependen del modelo: entre 15 y 25 días corridos. Te confirmamos el plazo exacto al momento de confirmar el pedido.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Puedo hacer cambios una vez que empezó la fabricación?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Tenés 48 horas desde la confirmación del pedido para hacer cambios. Pasado ese tiempo, los cambios estructurales ya no son posibles porque el proceso de corte y ensamble ya arrancó.</p></div></div>
       </div>
-
-      <!-- MATERIALES -->
       <div class="faq-group" id="faq-materiales">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Qué tipo de madera usan?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Trabajamos con Petiribí macizo, Paraíso y Guayubira. Todas maderas macizas argentinas. Para muebles también trabajamos con materiales enchapados según el diseño. Nunca usamos aglomerado.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Hacen combinaciones de madera con hierro?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Sí, es una de nuestras especialidades. Trabajamos bases de hierro pintado en negro o blanco satinado en combinación con tapas de madera maciza.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Puedo elegir el color y la terminación?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>La terminación estándar es laca poliuretánica semi mate transparente. En maderas claras como Paraíso también podemos laquear en negro o blanco. No ofrecemos otros colores ni terminaciones distintas.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Qué tipo de madera usan?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Trabajamos con Petiribí macizo, Paraíso y Guayubira. Todas maderas macizas argentinas. Para muebles también trabajamos con materiales enchapados según el diseño. Nunca usamos aglomerado.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Hacen combinaciones de madera con hierro?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí, es una de nuestras especialidades. Trabajamos bases de hierro pintado en negro o blanco satinado en combinación con tapas de madera maciza.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Puedo elegir el color y la terminación?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>La terminación estándar es laca poliuretánica semi mate transparente. En maderas claras como Paraíso también podemos laquear en negro o blanco. No ofrecemos otros colores ni terminaciones distintas.</p></div></div>
       </div>
-
-      <!-- PRECIOS -->
       <div class="faq-group" id="faq-precios">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Cómo es el esquema de pago?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Trabajamos con una seña del 10% del total para arrancar la fabricación. El saldo se abona en efectivo billete cuando el mueble está terminado. Si preferís abonar por transferencia o débito, se emite factura y se suma el 21% de IVA.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Aceptan tarjeta de crédito o cuotas?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Sí. Aceptamos tarjeta de crédito en 6 cuotas sin interés con un recargo del 51% sobre el precio de lista. También transferencia bancaria o débito con IVA incluido.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Qué pasa con la seña si cancelo?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>La seña no se devuelve si el producto está correctamente terminado. Al ser madera maciza natural, pueden aparecer vetas, nudos o detalles propios del material que no son defectos de fabricación.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Cómo es el esquema de pago?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Trabajamos con una seña del 10% del total para arrancar la fabricación. El saldo se abona en efectivo billete cuando el mueble está terminado. Si preferís abonar por transferencia o débito, se emite factura y se suma el 21% de IVA.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Aceptan tarjeta de crédito o cuotas?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí. Aceptamos tarjeta de crédito en 6 cuotas sin interés con un recargo del 51% sobre el precio de lista. También transferencia bancaria o débito con IVA incluido.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Qué pasa con la seña si cancelo?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>La seña no se devuelve si el producto está correctamente terminado. Al ser madera maciza natural, pueden aparecer vetas, nudos o detalles propios del material que no son defectos de fabricación.</p></div></div>
       </div>
-
-      <!-- ENTREGA -->
       <div class="faq-group" id="faq-entrega">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Hacen envíos al interior del país?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Sí. El cliente contrata un expreso de confianza que retira el producto en nuestro taller. Hay que sumar un costo de embalaje al total. Te asesoramos con el flete más conveniente según la zona.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Hacen montaje e instalación?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>No realizamos instalación. Todos los muebles están diseñados para que el armado sea sencillo. Te entregamos el mueble listo para usar o con instrucciones claras si requiere algún ensamble.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Qué pasa si el mueble llega con algún daño?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Todos los muebles salen del taller fotografiados y embalados correctamente. Si llegara con algún daño de transporte, lo gestionamos juntos.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Hacen envíos al interior del país?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí. El cliente contrata un expreso de confianza que retira el producto en nuestro taller. Hay que sumar un costo de embalaje al total. Te asesoramos con el flete más conveniente según la zona.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Hacen montaje e instalación?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>No realizamos instalación. Todos los muebles están diseñados para que el armado sea sencillo. Te entregamos el mueble listo para usar.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Qué pasa si el mueble llega con algún daño?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Todos los muebles salen del taller fotografiados y embalados correctamente. Si llegara con algún daño de transporte, lo gestionamos juntos.</p></div></div>
       </div>
-
-      <!-- GARANTIA -->
       <div class="faq-group" id="faq-garantia">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Tienen garantía los muebles?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Sí. Garantía estructural de por vida en ensambles y estructura. Si algo cede o falla por defecto de fabricación, lo reparamos sin costo. El cliente se hace cargo del traslado hasta el taller y del retiro una vez reparado. Importante: ningún tablero debe exponerse a fuentes de calor directo como el sol.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Qué cubre y qué no cubre la garantía?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Cubre defectos de fabricación, ensambles y estructura. No cubre deterioro por mal uso, humedad extrema, exposición al sol o fuentes de calor, falta de mantenimiento o daños de transporte. Con cada entrega te damos una guía de cuidados.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)">
-            <span class="faq-q">¿Cómo cuido la madera?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><p>Con cera suiza una vez al año es suficiente para mantener la madera en perfecto estado. Evitá productos abrasivos y agua estancada sobre la superficie. No expongas la mesa al sol directo ni a fuentes de calor. La madera bien cuidada mejora con el tiempo.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Tienen garantía los muebles?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí. Garantía estructural de por vida en ensambles y estructura. Si algo cede o falla por defecto de fabricación, lo reparamos sin costo. El cliente se hace cargo del traslado hasta el taller.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Qué cubre y qué no cubre la garantía?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Cubre defectos de fabricación, ensambles y estructura. No cubre deterioro por mal uso, humedad extrema, exposición al sol o fuentes de calor, falta de mantenimiento o daños de transporte.</p></div></div>
+        <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">¿Cómo cuido la madera?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Con cera suiza una vez al año es suficiente. Evitá productos abrasivos y agua estancada sobre la superficie. No expongas la mesa al sol directo ni a fuentes de calor. La madera bien cuidada mejora con el tiempo.</p></div></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -397,27 +273,14 @@
 <section class="cta-final reveal">
   <div>
     <h2 class="cta-title">Hablemos de<br>tu <em>proyecto</em></h2>
-    <p class="cta-sub">Sin compromiso, sin presiones. Una conversación para entender qué necesitás y ver si podemos ayudarte.</p>
+    <p class="cta-sub">Sin compromiso, sin presiones. Una conversación para entender qué necesitás.</p>
     <a href="https://wa.me/5491162055558?text=Hola!%20Quiero%20consultar%20sobre%20un%20proyecto" target="_blank" class="btn-primary">Escribir por WhatsApp</a>
     <a href="mesas.html" class="btn-ghost">Ver cotizador →</a>
   </div>
   <div class="contacto-info">
-    <div class="contacto-item">
-      <span class="contacto-label">WhatsApp</span>
-      <span class="contacto-val"><a href="https://wa.me/5491162055558" target="_blank">+54 9 11 6205-5558</a></span>
-    </div>
-    <div class="contacto-item">
-      <span class="contacto-label">Email</span>
-      <span class="contacto-val"><a href="mailto:info@granrosado.com.ar">info@granrosado.com.ar</a></span>
-    </div>
-    <div class="contacto-item">
-      <span class="contacto-label">Instagram</span>
-      <span class="contacto-val"><a href="https://instagram.com/granrosado" target="_blank">@granrosado</a></span>
-    </div>
-    <div class="contacto-item">
-      <span class="contacto-label">Zona de entrega</span>
-      <span class="contacto-val">CABA y Gran Buenos Aires</span>
-    </div>
+    <div class="contacto-item"><span class="contacto-label">WhatsApp</span><span class="contacto-val"><a href="https://wa.me/5491162055558" target="_blank">+54 9 11 6205-5558</a></span></div>
+    <div class="contacto-item"><span class="contacto-label">Instagram</span><span class="contacto-val"><a href="https://instagram.com/granrosado" target="_blank">@granrosado</a></span></div>
+    <div class="contacto-item"><span class="contacto-label">Zona de entrega</span><span class="contacto-val">CABA y Gran Buenos Aires</span></div>
   </div>
 </section>
 
@@ -432,6 +295,8 @@
       <a href="https://wa.me/5491162055558" target="_blank">WhatsApp</a>
     </div>
     <p class="footer-legal">© 2025 Gran Rosado</p>
+    <p style="font-size:0.65rem;letter-spacing:0.12em;color:rgba(250,248,244,0.3);margin-top:8px;text-align:left;">Diseño web por <a href="https://netika.studio" target="_blank" style="color:rgba(200,169,110,0.6);text-decoration:none;letter-spacing:0.16em;font-weight:400;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(200,169,110,0.6)'">NÉTIKA</a></p>
+    <p style="font-size:0.65rem;letter-spacing:0.12em;color:rgba(250,248,244,0.3);margin-top:8px;">Diseño web por <a href="https://netika.studio" target="_blank" style="color:rgba(200,169,110,0.6);text-decoration:none;letter-spacing:0.16em;font-weight:400;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(200,169,110,0.6)'">NÉTIKA</a></p>
   </div>
 </footer>
 
@@ -471,5 +336,14 @@
     }
   }
 </script>
+<nav class="nav-mobile">
+  <a href="index.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>Inicio</a>
+  <a href="mesas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>Mesas</a>
+  <a href="sillas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>Sillas</a>
+  <a href="medida.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>A Medida</a>
+  <a href="proyectos.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>Proyectos</a>
+  <a href="nosotros.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>Nosotros</a>
+  <a href="faqs.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>FAQs</a>
+</nav>
 </body>
 </html>

@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mesas de Comedor a Medida — Gran Rosado | Buenos Aires</title>
-  <meta name="description" content="Mesas de comedor y ratonas en madera maciza. Cotizá online por material y medida. Paraíso, petiribí, guayubira y microcemento." />
-  <meta property="og:title" content="Mesas de Comedor — Gran Rosado" />
-  <meta property="og:description" content="Cotizá tu mesa online. Madera maciza, más de 15 bases, precios reales." />
-  <meta property="og:image" content="img/4_PATAS_CLASICA.jpg" />
+  <meta name="description" content="Mesas de comedor y ratonas en madera maciza. Cotizá online por material y medida." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
@@ -19,7 +16,6 @@
       --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Jost', sans-serif;
     }
     body { background: var(--warm); color: var(--dark); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
-
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 28px 60px; transition: background 0.4s, padding 0.4s; }
     nav.scrolled { background: rgba(250,248,244,0.96); backdrop-filter: blur(12px); padding: 18px 60px; border-bottom: 1px solid var(--line); }
     .logo { font-family: var(--serif); font-size: 1.7rem; font-weight: 300; text-decoration: none; color: var(--dark); letter-spacing: 0.03em; }
@@ -29,34 +25,23 @@
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
     .nav-cta { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--warm); background: var(--dark); padding: 11px 26px; transition: background 0.3s; }
     .nav-cta:hover { background: var(--gold); }
-
-    /* HERO MESAS */
     .page-hero { padding: 140px 60px 80px; background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
     .hero-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .hero-title { font-family: var(--serif); font-size: clamp(3rem, 5vw, 5rem); font-weight: 300; line-height: 1.05; }
     .hero-title em { font-style: italic; }
     .hero-desc { font-size: 0.88rem; line-height: 1.85; color: var(--mid); max-width: 380px; }
-
-    /* COTIZADOR */
     .cotizador { padding: 80px 60px; }
     .cot-title { font-family: var(--serif); font-size: 2rem; font-weight: 300; margin-bottom: 8px; }
     .cot-sub { font-size: 0.83rem; color: var(--light); margin-bottom: 48px; letter-spacing: 0.06em; }
-
     .cot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
-    /* PASO 1: MEDIDAS */
     .paso { margin-bottom: 48px; }
     .paso-num { font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     .paso-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; margin-bottom: 24px; }
-
     .slider-row { margin-bottom: 28px; }
     .slider-label { display: flex; justify-content: space-between; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--light); margin-bottom: 10px; }
     .slider-val { color: var(--gold); font-weight: 400; }
     input[type=range] { width: 100%; -webkit-appearance: none; height: 2px; background: var(--line); outline: none; cursor: pointer; }
     input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); border: 3px solid var(--warm); box-shadow: 0 0 0 1px var(--gold); }
-    input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(to right, var(--gold) 0%, var(--gold) var(--pct, 30%), var(--line) var(--pct, 30%)); }
-
-    /* PASO 2: MATERIAL */
     .mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .mat-card { border: 1px solid var(--line); cursor: pointer; transition: all 0.25s; overflow: hidden; }
     .mat-card:hover { border-color: var(--gold); }
@@ -66,8 +51,6 @@
     .mat-card-name { font-family: var(--serif); font-size: 1rem; font-weight: 300; }
     .mat-card-precio { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light); margin-top: 2px; }
     .mat-card.active .mat-card-precio { color: var(--gold); }
-
-    /* RESULTADO */
     .resultado { background: var(--dark); padding: 40px; position: sticky; top: 100px; }
     .res-label { font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
     .res-medida { font-family: var(--serif); font-size: 1.1rem; color: rgba(250,248,244,0.6); margin-bottom: 4px; }
@@ -77,22 +60,18 @@
     .res-precio small { font-size: 1.2rem; color: var(--gold); }
     .res-precio.consultar { font-size: 1.4rem; color: var(--gold); }
     .res-base-extra { font-size: 0.78rem; color: var(--gold); margin-top: 10px; min-height: 20px; }
+    .res-efvo { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,248,244,0.3); margin-top: 6px; }
+    .res-efvo span { color: var(--gold); }
     .res-divider { border: none; border-top: 1px solid rgba(250,248,244,0.08); margin: 28px 0; }
     .btn-wa { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px; background: #25D366; color: white; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-family: var(--sans); transition: background 0.3s; margin-bottom: 10px; }
     .btn-wa:hover { background: #1db954; }
-    .btn-consultar { display: block; width: 100%; padding: 14px; border: 1px solid rgba(250,248,244,0.15); color: rgba(250,248,244,0.6); text-align: center; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-family: var(--sans); transition: all 0.3s; }
-    .btn-consultar:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* BASES */
     .bases-section { padding: 80px 60px; background: var(--cream); }
     .sec-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .sec-title { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.15; margin-bottom: 48px; }
     .sec-title em { font-style: italic; }
-
     .bases-grupo { margin-bottom: 56px; }
     .bases-grupo-title { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mid); padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
     .bases-grupo-title span { background: var(--gold); color: white; padding: 3px 10px; font-size: 0.6rem; letter-spacing: 0.14em; }
-
     .bases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
     .base-card { background: var(--warm); cursor: pointer; border: 2px solid transparent; transition: all 0.25s; overflow: hidden; }
     .base-card:hover { border-color: rgba(200,169,110,0.4); }
@@ -104,15 +83,15 @@
     .base-card-extra { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
     .base-card-extra.incluida { color: #7ab87a; }
     .base-card-extra.sobreprecio { color: var(--gold); }
-
-    /* FOOTER */
     footer { background: var(--dark); padding: 60px; }
     .footer-simple { display: flex; justify-content: space-between; align-items: center; }
     .footer-legal { font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(250,248,244,0.3); }
     .footer-links { display: flex; gap: 32px; }
     .footer-links a { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: rgba(250,248,244,0.4); transition: color 0.3s; }
     .footer-links a:hover { color: var(--gold); }
-
+    .wa-float { position: fixed; bottom: 32px; right: 32px; z-index: 999; display: flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 14px 22px 14px 18px; text-decoration: none; box-shadow: 0 4px 24px rgba(37,211,102,0.35); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
+    .wa-float span { font-weight: 300; }
     @media(max-width:1024px) {
       nav, nav.scrolled { padding: 20px 28px; }
       .page-hero { grid-template-columns: 1fr; padding: 120px 28px 60px; gap: 28px; }
@@ -129,20 +108,25 @@
       .bases-grid { grid-template-columns: 1fr 1fr; }
       .footer-simple { flex-direction: column; gap: 20px; text-align: center; }
     }
-    .wa-float {
-      position: fixed; bottom: 32px; right: 32px; z-index: 999;
-      display: flex; align-items: center; gap: 10px;
-      background: #25D366; color: white;
-      padding: 14px 22px 14px 18px;
-      text-decoration: none;
-      box-shadow: 0 4px 24px rgba(37,211,102,0.35);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-family: var(--sans); font-size: 0.72rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-    }
-    .wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
-    .wa-float span { font-weight: 300; }
+    .nav-mobile { display: none; }
+@media(max-width:640px) {
+  .nav-links { display: none; }
+  .nav-mobile { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--dark); border-top: 1px solid rgba(250,248,244,0.08); padding: 0; height: 58px; }
+  .nav-mobile a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: rgba(250,248,244,0.4); gap: 4px; transition: color 0.2s; }
+  .nav-mobile a:hover, .nav-mobile a.active { color: var(--gold); }
+  .nav-mobile svg { width: 18px; height: 18px; }
+  body { padding-bottom: 58px; }
+  .wa-float { bottom: 70px; }
+}
   </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQM0Q54BCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQM0Q54BCX');
+</script>
 </head>
 <body>
 
@@ -155,6 +139,7 @@
     <li><a href="medida.html">A Medida</a></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
   </ul>
   <a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!" class="nav-cta" target="_blank">Consultar</a>
 </nav>
@@ -170,14 +155,11 @@
 <section class="cotizador">
   <h2 class="cot-title">Cotizador de mesas</h2>
   <p class="cot-sub">Elegí medidas y material — el precio se actualiza solo</p>
-
   <div class="cot-grid">
     <div>
-      <!-- PASO 1 -->
       <div class="paso">
         <p class="paso-num">Paso 01 — Medidas</p>
         <h3 class="paso-title">¿Qué tamaño necesitás?</h3>
-
         <div class="slider-row">
           <div class="slider-label"><span>Largo</span><span class="slider-val" id="v-largo">160 cm</span></div>
           <input type="range" id="s-largo" min="120" max="300" value="160" step="10" oninput="calcular()" />
@@ -187,203 +169,132 @@
           <input type="range" id="s-ancho" min="80" max="120" value="80" step="20" oninput="calcular()" />
         </div>
       </div>
-
-      <!-- PASO 2 -->
       <div class="paso">
         <p class="paso-num">Paso 02 — Material</p>
         <h3 class="paso-title">¿Con qué madera?</h3>
         <div class="mat-grid">
           <div class="mat-card active" onclick="setMat(this,'micro')" data-mat="micro">
-            <img src="img/bases/Microcemento.jpg" alt="Microcemento" />
+            <img src="img/Microcemento.jpg" alt="Microcemento" />
             <div class="mat-card-body"><div class="mat-card-name">Microcemento</div><div class="mat-card-precio">Precio base</div></div>
           </div>
           <div class="mat-card" onclick="setMat(this,'paraiso')" data-mat="paraiso">
-            <img src="img/bases/paraiso.jpg" alt="Paraíso" />
+            <img src="img/paraiso.jpg" alt="Paraíso" />
             <div class="mat-card-body"><div class="mat-card-name">Paraíso</div><div class="mat-card-precio">Precio medio</div></div>
           </div>
           <div class="mat-card" onclick="setMat(this,'pet')" data-mat="pet">
-            <img src="img/bases/petiribi.jpg" alt="Petiribí / Guayubira" />
+            <img src="img/petiribi.jpg" alt="Petiribí / Guayubira" />
             <div class="mat-card-body"><div class="mat-card-name">Petiribí / Guayubira</div><div class="mat-card-precio">Premium</div></div>
           </div>
           <div class="mat-card" onclick="setMat(this,'marmol')" data-mat="marmol">
-            <img src="img/marmol.jpg" alt="Mármol" />
+            <img src="img/marmol.jpg" alt="Mármol Carrara" />
             <div class="mat-card-body"><div class="mat-card-name">Mármol Carrara</div><div class="mat-card-precio">A consultar</div></div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- RESULTADO -->
     <div class="resultado">
       <p class="res-label">Tu mesa</p>
       <p class="res-medida" id="res-medida">160 × 80 cm</p>
-      <p class="res-mat" id="res-mat">Microcemento</p>
+      <p class="res-mat" id="res-mat">Microcemento · H Elevada</p>
       <p class="res-precio-label">Precio estimado</p>
       <div class="res-precio" id="res-precio"><small>$</small>420.719</div>
       <p class="res-base-extra" id="res-base-extra"></p>
+      <p class="res-efvo">Precio en efectivo billete &nbsp;·&nbsp; <span>+ IVA</span></p>
       <hr class="res-divider" />
-      <p style="font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(250,248,244,0.3); margin-bottom:16px;">
-        Precio en efectivo billete &nbsp;·&nbsp; <span style="color:var(--gold);">+ IVA</span>
-      </p>
       <a id="btn-wa" href="https://wa.me/5491162055558?text=Hola!%20Quiero%20consultar%20una%20mesa%20de%20160x80%20en%20Microcemento" target="_blank" class="btn-wa">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Consultar por WhatsApp
       </a>
-      <a href="mailto:info@granrosado.com.ar" class="btn-consultar">Consultar por email</a>
     </div>
   </div>
 </section>
 
-<!-- BASES -->
 <section class="bases-section">
   <p class="sec-label">Paso 03 — Base</p>
   <h2 class="sec-title">Elegí tu <em>base</em></h2>
 
-  <!-- MADERA SIN SOBREPRECIO -->
   <div class="bases-grupo">
-    <div class="bases-grupo-title">
-      Bases de madera
-      <span>Incluidas en el precio</span>
-    </div>
+    <div class="bases-grupo-title">Bases de madera <span>Incluidas en el precio</span></div>
     <div class="bases-grid">
       <div class="base-card active" onclick="setBase(this, 0, 'H Elevada')">
-        <img src="img/bases/H ELEVADA.jpg" alt="H Elevada" style="object-position: center 60%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">H Elevada</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/H ELEVADA.jpg" alt="H Elevada" style="object-position: center 60%;" />
+        <div class="base-card-body"><div class="base-card-name">H Elevada</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 0, 'H al Piso')">
-        <img src="img/bases/H AL PISO.jpg" alt="H al Piso" />
-        <div class="base-card-body">
-          <div class="base-card-name">H al Piso</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/H AL PISO.jpg" alt="H al Piso" style="object-position: center 55%;" />
+        <div class="base-card-body"><div class="base-card-name">H al Piso</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 0, '4 Patas Clásica')">
-        <img src="img/bases/4 PATAS CLASICA.jpg" alt="4 Patas Clásica" />
-        <div class="base-card-body">
-          <div class="base-card-name">4 Patas Clásica</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/4 PATAS CLASICA.jpg" alt="4 Patas Clásica" style="object-position: center 25%;" />
+        <div class="base-card-body"><div class="base-card-name">4 Patas Clásica</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 0, '4 Patas Afinada')">
-        <img src="img/bases/4 PATAS AFINADAS.jpg" alt="4 Patas Afinada" style="object-position: center 55%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">4 Patas Afinada</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/4 PATAS AFINADAS.jpg" alt="4 Patas Afinada" style="object-position: center 20%;" />
+        <div class="base-card-body"><div class="base-card-name">4 Patas Afinada</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 0, 'Gervasoni Elevada')">
-        <img src="img/bases/GERVASONI ELEVADA.jpg" alt="Gervasoni Elevada" style="object-position: center 40%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Gervasoni Elevada</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/GERVASONI ELEVADA.jpg" alt="Gervasoni Elevada" style="object-position: center 40%;" />
+        <div class="base-card-body"><div class="base-card-name">Gervasoni Elevada</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 0, 'Gervasoni al Piso')">
-        <img src="img/GERVASONI AL PISO.jpeg" alt="Gervasoni al Piso" style="object-position: center 55%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Gervasoni al Piso</div>
-          <div class="base-card-extra incluida">✓ Incluida</div>
-        </div>
+        <img src="img/GERVASONI AL PISO.jpeg" alt="Gervasoni al Piso" style="object-position: center 20%;" />
+        <div class="base-card-body"><div class="base-card-name">Gervasoni al Piso</div><div class="base-card-extra incluida">✓ Incluida</div></div>
       </div>
     </div>
   </div>
 
-  <!-- MADERA CON SOBREPRECIO -->
   <div class="bases-grupo">
-    <div class="bases-grupo-title">
-      Bases de madera especiales
-      <span>Con diferencia de precio</span>
-    </div>
+    <div class="bases-grupo-title">Bases de madera especiales <span>Con diferencia de precio</span></div>
     <div class="bases-grid">
-      <div class="base-card" onclick="setBase(this, 85000, '3 Rectángulos')">
-        <img src="img/bases/3 RECTANGULOS.jpg" alt="3 Rectángulos" style="object-position: center 35%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">3 Rectángulos</div>
-          <div class="base-card-extra sobreprecio">+ $100.000</div>
-        </div>
+      <div class="base-card" onclick="setBase(this, 100000, '3 Rectángulos')">
+        <img src="img/3 RECTANGULOS.jpg" alt="3 Rectángulos" style="object-position: center 35%;" />
+        <div class="base-card-body"><div class="base-card-name">3 Rectángulos</div><div class="base-card-extra sobreprecio">+ $100.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 100000, 'Varillada Cónica')">
-        <img src="img/bases/VARILLADA CONICA.jpg" alt="Varillada Cónica" />
-        <div class="base-card-body">
-          <div class="base-card-name">Varillada Cónica</div>
-          <div class="base-card-extra sobreprecio">+ $100.000</div>
-        </div>
+        <img src="img/VARILLADA CONICA.jpg" alt="Varillada Cónica" style="object-position: center 25%;" />
+        <div class="base-card-body"><div class="base-card-name">Varillada Cónica</div><div class="base-card-extra sobreprecio">+ $100.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 100000, 'Varillada Recta')">
-        <img src="img/bases/VARILLADA RECTA.jpg" alt="Varillada Recta" style="object-position: center 40%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Varillada Recta</div>
-          <div class="base-card-extra sobreprecio">+ $100.000</div>
-        </div>
+        <img src="img/VARILLADA RECTA.jpg" alt="Varillada Recta" style="object-position: center 40%;" />
+        <div class="base-card-body"><div class="base-card-name">Varillada Recta</div><div class="base-card-extra sobreprecio">+ $100.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 200000, '2 Círculos Varillados')">
-        <img src="img/bases/2 CIRCULOS VARILLADOS.jpg" alt="2 Círculos Varillados" />
-        <div class="base-card-body">
-          <div class="base-card-name">2 Círculos Varillados</div>
-          <div class="base-card-extra sobreprecio">+ $200.000</div>
-        </div>
+        <img src="img/2 CIRCULOS VARILLADOS.jpg" alt="2 Círculos Varillados" />
+        <div class="base-card-body"><div class="base-card-name">2 Círculos Varillados</div><div class="base-card-extra sobreprecio">+ $200.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 200000, '2 Medios Círculos')">
-        <img src="img/bases/2 MEDIOS CIRCULOS VARILLADOS.jpg" alt="2 Medios Círculos" />
-        <div class="base-card-body">
-          <div class="base-card-name">2 Medios Círculos</div>
-          <div class="base-card-extra sobreprecio">+ $200.000</div>
-        </div>
+        <img src="img/2 MEDIOS CIRCULOS VARILLADOS.jpg" alt="2 Medios Círculos" />
+        <div class="base-card-body"><div class="base-card-name">2 Medios Círculos</div><div class="base-card-extra sobreprecio">+ $200.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 100000, 'Varillado Oval')">
-        <img src="img/bases/VARILLADO OVAL.jpg" alt="Varillado Oval" style="object-position: center 40%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Varillado Oval</div>
-          <div class="base-card-extra sobreprecio">+ $100.000</div>
-        </div>
+        <img src="img/VARILLADO OVAL.jpg" alt="Varillado Oval" style="object-position: center 40%;" />
+        <div class="base-card-body"><div class="base-card-name">Varillado Oval</div><div class="base-card-extra sobreprecio">+ $100.000</div></div>
       </div>
     </div>
   </div>
 
-  <!-- HIERRO -->
   <div class="bases-grupo">
-    <div class="bases-grupo-title">
-      Bases de hierro
-      <span>Con diferencia de precio</span>
-    </div>
+    <div class="bases-grupo-title">Bases de hierro <span>Con diferencia de precio</span></div>
     <div class="bases-grid">
       <div class="base-card" onclick="setBase(this, 100000, 'Cruz de Hierro')">
-        <img src="img/bases/CRUZ HIERRO.jpg" alt="Cruz de Hierro" style="object-position: center 40%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Cruz de Hierro</div>
-          <div class="base-card-extra sobreprecio">+ $100.000</div>
-        </div>
+        <img src="img/CRUZ HIERRO.jpg" alt="Cruz de Hierro" style="object-position: center 40%;" />
+        <div class="base-card-body"><div class="base-card-name">Cruz de Hierro</div><div class="base-card-extra sobreprecio">+ $100.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 230000, 'H de Hierro')">
-        <img src="img/bases/H AL PISO.jpg" alt="H de Hierro" />
-        <div class="base-card-body">
-          <div class="base-card-name">H de Hierro</div>
-          <div class="base-card-extra sobreprecio">+ $230.000</div>
-        </div>
+        <img src="img/H AL PISO.jpg" alt="H de Hierro" style="object-position: center 55%;" />
+        <div class="base-card-body"><div class="base-card-name">H de Hierro</div><div class="base-card-extra sobreprecio">+ $230.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 230000, 'Y Elevada Hierro')">
-        <img src="img/bases/Y ELEVADA DE HIERRO.jpg" alt="Y Elevada de Hierro" />
-        <div class="base-card-body">
-          <div class="base-card-name">Y Elevada Hierro</div>
-          <div class="base-card-extra sobreprecio">+ $230.000</div>
-        </div>
+        <img src="img/Y ELEVADA DE HIERRO.jpg" alt="Y Elevada de Hierro" style="object-position: center 40%;" />
+        <div class="base-card-body"><div class="base-card-name">Y Elevada Hierro</div><div class="base-card-extra sobreprecio">+ $230.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 230000, 'Cuadrada Hierro')">
-        <img src="img/bases/CUADRADA HIERRO.jpg" alt="Cuadrada de Hierro" style="object-position: center 35%;" />
-        <div class="base-card-body">
-          <div class="base-card-name">Cuadrada Hierro</div>
-          <div class="base-card-extra sobreprecio">+ $230.000</div>
-        </div>
+        <img src="img/CUADRADA HIERRO.jpg" alt="Cuadrada de Hierro" style="object-position: center 35%;" />
+        <div class="base-card-body"><div class="base-card-name">Cuadrada Hierro</div><div class="base-card-extra sobreprecio">+ $230.000</div></div>
       </div>
       <div class="base-card" onclick="setBase(this, 230000, '4 Patas Hierro')">
-        <img src="img/bases/4 PATAS HIERRO.jpg" alt="4 Patas de Hierro" />
-        <div class="base-card-body">
-          <div class="base-card-name">4 Patas Hierro</div>
-          <div class="base-card-extra sobreprecio">+ $230.000</div>
-        </div>
+        <img src="img/4 PATAS HIERRO.jpg" alt="4 Patas de Hierro" />
+        <div class="base-card-body"><div class="base-card-name">4 Patas Hierro</div><div class="base-card-extra sobreprecio">+ $230.000</div></div>
       </div>
     </div>
   </div>
@@ -400,8 +311,15 @@
       <a href="https://wa.me/5491162055558" target="_blank">WhatsApp</a>
     </div>
     <p class="footer-legal">© 2025 Gran Rosado</p>
+    <p style="font-size:0.65rem;letter-spacing:0.12em;color:rgba(250,248,244,0.3);margin-top:8px;text-align:left;">Diseño web por <a href="https://netika.studio" target="_blank" style="color:rgba(200,169,110,0.6);text-decoration:none;letter-spacing:0.16em;font-weight:400;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(200,169,110,0.6)'">NÉTIKA</a></p>
+    <p style="font-size:0.65rem;letter-spacing:0.12em;color:rgba(250,248,244,0.3);margin-top:8px;">Diseño web por <a href="https://netika.studio" target="_blank" style="color:rgba(200,169,110,0.6);text-decoration:none;letter-spacing:0.16em;font-weight:400;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(200,169,110,0.6)'">NÉTIKA</a></p>
   </div>
 </footer>
+
+<a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!%20Quiero%20consultar." target="_blank" class="wa-float">
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Consultar</span>
+</a>
 
 <script>
   const nav = document.getElementById('nav');
@@ -413,7 +331,7 @@
     pet: {'120x80':553759,'130x80':574000,'140x80':594278,'150x80':608000,'160x80':621291,'170x80':652000,'180x80':683420,'190x80':718000,'200x80':751762,'210x80':789000,'220x80':826938,'230x80':868000,'240x80':909632,'160x100':751762,'170x100':789000,'180x100':826938,'190x100':868000,'200x100':909630,'210x100':955000,'220x100':1000593,'230x100':1051000,'240x100':1100653,'250x100':1156000,'260x100':1210718,'180x120':1000596,'190x120':1051000,'200x120':1100654,'210x120':1156000,'220x120':1210720,'230x120':1271000,'240x120':1331792,'250x120':1398000,'260x120':1464971,'270x120':1538000,'280x120':1611468,'290x120':1692000,'300x120':1772615}
   };
 
-  const matNombres = { micro: 'Microcemento', paraiso: 'Paraíso', pet: 'Petiribí / Guayubira', marmol: 'Mármol' };
+  const matNombres = { micro: 'Microcemento', paraiso: 'Paraíso', pet: 'Petiribí / Guayubira', marmol: 'Mármol Carrara' };
   let matActual = 'micro';
   let baseExtra = 0;
   let baseNombre = 'H Elevada';
@@ -440,10 +358,8 @@
     document.getElementById('v-ancho').textContent = ancho + ' cm';
     document.getElementById('res-medida').textContent = largo + ' × ' + ancho + ' cm';
     document.getElementById('res-mat').textContent = matNombres[matActual] + ' · ' + baseNombre;
-
     const el = document.getElementById('res-precio');
     const extraEl = document.getElementById('res-base-extra');
-
     if (matActual === 'marmol') {
       const m2 = (parseInt(largo) * parseInt(ancho)) / 10000;
       const precioMarmol = Math.round(m2 * 700000 / 1000) * 1000;
@@ -464,18 +380,20 @@
         extraEl.textContent = '';
       }
     }
-
     const txtWa = `Hola! Quiero consultar una mesa de ${largo}x${ancho} en ${matNombres[matActual]}, base ${baseNombre}`;
     document.getElementById('btn-wa').href = 'https://wa.me/5491162055558?text=' + encodeURIComponent(txtWa);
   }
 
   calcular();
 </script>
-
-<!-- WhatsApp Flotante -->
-<a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!%20Quiero%20consultar." target="_blank" class="wa-float" id="wa-float">
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>Consultar</span>
-</a>
+<nav class="nav-mobile">
+  <a href="index.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>Inicio</a>
+  <a href="mesas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>Mesas</a>
+  <a href="sillas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>Sillas</a>
+  <a href="medida.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>A Medida</a>
+  <a href="proyectos.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>Proyectos</a>
+  <a href="nosotros.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>Nosotros</a>
+  <a href="faqs.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>FAQs</a>
+</nav>
 </body>
 </html>

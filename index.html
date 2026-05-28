@@ -15,32 +15,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #f5f0e8;
-      --warm: #faf8f4;
-      --dark: #1a1814;
-      --mid: #4a4540;
-      --light: #8a8278;
-      --gold: #c8a96e;
-      --line: rgba(26,24,20,0.12);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Jost', sans-serif;
+      --cream: #f5f0e8; --warm: #faf8f4; --dark: #1a1814; --mid: #4a4540;
+      --light: #8a8278; --gold: #c8a96e; --line: rgba(26,24,20,0.12);
+      --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Jost', sans-serif;
     }
     html { scroll-behavior: smooth; }
     body { background: var(--warm); color: var(--dark); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 28px 60px;
-      transition: background 0.4s, padding 0.4s;
-    }
-    nav.scrolled {
-      background: rgba(250,248,244,0.96);
-      backdrop-filter: blur(12px);
-      padding: 18px 60px;
-      border-bottom: 1px solid var(--line);
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 28px 60px; transition: background 0.4s, padding 0.4s; }
+    nav.scrolled { background: rgba(250,248,244,0.96); backdrop-filter: blur(12px); padding: 18px 60px; border-bottom: 1px solid var(--line); }
     .logo { font-family: var(--serif); font-size: 1.7rem; font-weight: 300; text-decoration: none; color: var(--dark); letter-spacing: 0.03em; }
     .logo span { color: var(--gold); }
     .nav-links { display: flex; gap: 40px; list-style: none; }
@@ -48,8 +30,6 @@
     .nav-links a:hover { color: var(--gold); }
     .nav-cta { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--warm); background: var(--dark); padding: 11px 26px; transition: background 0.3s; }
     .nav-cta:hover { background: var(--gold); }
-
-    /* HERO */
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
     .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 0 60px 90px; z-index: 2; }
     .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; opacity: 0; animation: fadeUp 1s ease 0.3s forwards; }
@@ -62,16 +42,11 @@
     .btn-ghost { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--mid); display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; }
     .btn-ghost:hover { color: var(--dark); }
     .hero-right { position: relative; overflow: hidden; opacity: 0; animation: fadeIn 1.4s ease 0.2s forwards; }
-    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transform: scale(1.04); transition: transform 8s ease; }
-    .hero-right:hover img { transform: scale(1); }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--warm) 0%, transparent 25%); z-index: 1; }
-
-    /* STRIP */
     .strip { background: var(--dark); padding: 16px 60px; display: flex; gap: 50px; overflow: hidden; }
     .strip-item { display: flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,248,244,0.45); }
     .strip-dot { width: 3px; height: 3px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-
-    /* CATEGORIAS */
     .categorias { padding: 120px 60px; }
     .sec-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .sec-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.15; }
@@ -82,7 +57,7 @@
     .cat-card { position: relative; overflow: hidden; text-decoration: none; color: inherit; background: var(--cream); display: block; }
     .cat-card:first-child { grid-row: span 2; }
     .cat-img { overflow: hidden; }
-    .cat-card:first-child .cat-img { height: 260px; }
+    .cat-card:first-child .cat-img { height: 580px; }
     .cat-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.7s ease; display: block; }
     .cat-card:not(:first-child) .cat-img { height: 260px; }
     .cat-card:hover .cat-img img { transform: scale(1.06); }
@@ -92,8 +67,6 @@
     .cat-arrow { width: 34px; height: 34px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: background 0.3s, border-color 0.3s; flex-shrink: 0; }
     .cat-card:hover .cat-arrow { background: var(--gold); border-color: var(--gold); }
     .cat-card:hover .cat-arrow svg path { stroke: white; }
-
-    /* COTIZADOR BANNER */
     .cot-banner { background: var(--cream); padding: 110px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; overflow: hidden; }
     .cot-banner::before { content: 'COTIZADOR'; position: absolute; font-family: var(--serif); font-size: 15vw; font-weight: 300; color: rgba(26,24,20,0.04); right: -2%; top: 50%; transform: translateY(-50%); pointer-events: none; white-space: nowrap; }
     .cot-desc { font-size: 0.88rem; line-height: 1.85; color: var(--mid); margin: 20px 0 36px; }
@@ -112,8 +85,6 @@
     .price-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light); }
     .price-val { font-family: var(--serif); font-size: 2rem; font-weight: 300; }
     .price-val small { font-size: 0.9rem; color: var(--light); }
-
-    /* GALERIA */
     .galeria { padding: 120px 60px; }
     .gal-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
     .gal-link { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; transition: color 0.3s, border-color 0.3s; }
@@ -122,14 +93,10 @@
     .masonry-item { break-inside: avoid; margin-bottom: 14px; overflow: hidden; }
     .masonry-item img { width: 100%; display: block; transition: transform 0.6s ease; }
     .masonry-item:hover img { transform: scale(1.04); }
-
-    /* CTA */
     .cta { padding: 140px 60px; text-align: center; }
     .cta .sec-title { font-size: clamp(2.4rem, 5vw, 4.2rem); max-width: 650px; margin: 0 auto 16px; }
     .cta-sub { font-size: 0.88rem; color: var(--mid); margin: 18px auto 44px; max-width: 420px; line-height: 1.85; }
     .cta-btns { display: flex; gap: 20px; justify-content: center; }
-
-    /* FOOTER */
     footer { background: var(--dark); padding: 80px 60px 36px; }
     .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(250,248,244,0.08); }
     .footer-logo { color: var(--warm); display: inline-block; margin-bottom: 14px; }
@@ -142,16 +109,13 @@
     .footer-legal { font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(250,248,244,0.3); }
     .footer-wa { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--gold); border: 1px solid rgba(200,169,110,0.3); padding: 10px 20px; transition: all 0.3s; }
     .footer-wa:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-
-    /* REVEAL */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .reveal.on { opacity: 1; transform: none; }
-
-    /* ANIMATIONS */
+    .wa-float { position: fixed; bottom: 32px; right: 32px; z-index: 999; display: flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 14px 22px 14px 18px; text-decoration: none; box-shadow: 0 4px 24px rgba(37,211,102,0.35); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
+    .wa-float span { font-weight: 300; }
     @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
     @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-    /* RESPONSIVE */
     @media(max-width:1024px) {
       nav, nav.scrolled { padding: 20px 28px; }
       .hero { grid-template-columns: 1fr; }
@@ -165,6 +129,7 @@
       .masonry { columns: 2; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
       .strip { padding: 16px 28px; }
+      footer { padding: 60px 28px 36px; }
     }
     @media(max-width:640px) {
       .nav-links { display: none; }
@@ -174,20 +139,25 @@
       .footer-top { grid-template-columns: 1fr; }
       .cta-btns { flex-direction: column; align-items: center; }
     }
-    .wa-float {
-      position: fixed; bottom: 32px; right: 32px; z-index: 999;
-      display: flex; align-items: center; gap: 10px;
-      background: #25D366; color: white;
-      padding: 14px 22px 14px 18px;
-      text-decoration: none;
-      box-shadow: 0 4px 24px rgba(37,211,102,0.35);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-family: var(--sans); font-size: 0.72rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-    }
-    .wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
-    .wa-float span { font-weight: 300; }
+   .nav-mobile { display: none; }
+@media(max-width:640px) {
+  .nav-links { display: none; }
+  .nav-mobile { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--dark); border-top: 1px solid rgba(250,248,244,0.08); padding: 0; height: 58px; }
+  .nav-mobile a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: rgba(250,248,244,0.4); gap: 4px; transition: color 0.2s; }
+  .nav-mobile a:hover, .nav-mobile a.active { color: var(--gold); }
+  .nav-mobile svg { width: 18px; height: 18px; }
+ body { padding-bottom: 58px; }
+  .wa-float { bottom: 70px; }
+}
   </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQM0Q54BCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQM0Q54BCX');
+</script>
 </head>
 <body>
 
@@ -199,6 +169,8 @@
     <li><a href="medida.html">A Medida</a></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+
   </ul>
   <a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!" class="nav-cta" target="_blank">Consultar</a>
 </nav>
@@ -215,7 +187,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-overlay"></div>
-    <img src="img/IMG-20250915-WA0024.jpg" alt="Mesa Gran Rosado" style="object-position: center 35%;" />
+    <img src="img/IMG-20220929-WA0052.jpg" alt="Mesa Gran Rosado" />
   </div>
 </section>
 
@@ -239,40 +211,35 @@
     <p class="cat-intro">Desde una mesa de comedor imponente hasta un mueble diseñado exactamente para tu espacio. Maderas macizas nobles, hierro, enchapado y mármol.</p>
   </div>
   <div class="cat-grid reveal">
-
-  <a href="mesas.html" class="cat-card">
-    <div class="cat-img"><img src="img/proyectos/IMG-20220929-WA0052.jpg" style="object-position: center 40%;" alt="Mesas Gran Rosado" style="object-position: center 25%;" /></div>
-    <div class="cat-body">
-      <div><div class="cat-name">Mesas</div><div class="cat-sub">Comedor · Ratonas · Con cotizador</div></div>
-      <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-    </div>
-  </a>
-
-  <a href="sillas.html" class="cat-card">
-    <div class="cat-img"><img src="img/sillas/bali_madera_1.jpg" style="object-position: center center;" alt="Sillas Gran Rosado" style="object-position: center center;" /></div>
-    <div class="cat-body">
-      <div><div class="cat-name">Sillas</div><div class="cat-sub">Madera · Tapizado · Kraft</div></div>
-      <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-    </div>
-  </a>
-
-  <a href="medida.html" class="cat-card">
-    <div class="cat-img"><img src="img/proyectos/img-20250228-wa0056.jpg" style="object-position: center 20%;" alt="Muebles a medida" style="object-position: center 30%;" /></div>
-    <div class="cat-body">
-      <div><div class="cat-name">A Medida</div><div class="cat-sub">Camas · Mesas de luz · Vajilleros</div></div>
-      <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-    </div>
-  </a>
-
-  <a href="proyectos.html" class="cat-card">
-    <div class="cat-img"><img src="img/proyectos/IMG-20230807-WA0040.jpg" style="object-position: center 30%;" alt="Proyectos Gran Rosado" style="object-position: center 20%;" /></div>
-    <div class="cat-body">
-      <div><div class="cat-name">Proyectos</div><div class="cat-sub">Residencial · Integral</div></div>
-      <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-    </div>
-  </a>
-
-</div>
+    <a href="mesas.html" class="cat-card">
+      <div class="cat-img"><img src="img/proyectos/IMG-20220929-WA0052.jpg" alt="Mesas Gran Rosado" style="object-position: center 40%;" /></div>
+      <div class="cat-body">
+        <div><div class="cat-name">Mesas</div><div class="cat-sub">Comedor · Ratonas · Con cotizador</div></div>
+        <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+    <a href="sillas.html" class="cat-card">
+      <div class="cat-img"><img src="img/sillasindex.png" alt="Sillas Gran Rosado" style="object-position: center center;" /></div>
+      <div class="cat-body">
+        <div><div class="cat-name">Sillas</div><div class="cat-sub">Madera · Tapizado · Kraft</div></div>
+        <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+    <a href="medida.html" class="cat-card">
+      <div class="cat-img"><img src="img/proyectos/IMG-20250228-WA0056.jpg" alt="Muebles a medida" style="object-position: center 20%;" /></div>
+      <div class="cat-body">
+        <div><div class="cat-name">A Medida</div><div class="cat-sub">Camas · Mesas de luz · Vajilleros</div></div>
+        <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+    <a href="proyectos.html" class="cat-card">
+      <div class="cat-img"><img src="img/proyectos/IMG-20230807-WA0040.jpg" alt="Proyectos Gran Rosado" style="object-position: center 30%;" /></div>
+      <div class="cat-body">
+        <div><div class="cat-name">Proyectos</div><div class="cat-sub">Residencial · Integral</div></div>
+        <div class="cat-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+      </div>
+    </a>
+  </div>
 </section>
 
 <section class="cot-banner">
@@ -315,15 +282,15 @@
     <a href="proyectos.html" class="gal-link">Ver todos los proyectos →</a>
   </div>
   <div class="masonry reveal">
-  <div class="masonry-item"><img src="img/IMG-20250321-WA0003.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/20240820_130555.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/IMG-20241113-WA0001.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/20241029_081033.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/IMG-20230807-WA0040.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/20250531_140641.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/IMG-20240920-WA0015.jpg" alt="" /></div>
-  <div class="masonry-item"><img src="img/20260123_075659.jpg" alt="" /></div>
-</div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20220929-WA0052.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20230612-WA0027.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20250228-WA0056.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20240107-WA0002.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20230807-WA0040.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20220526-WA0059.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20221105-WA0013.jpg" alt="" /></div>
+    <div class="masonry-item"><img src="img/proyectos/IMG-20240130-WA0023.jpg" alt="" /></div>
+  </div>
 </section>
 
 <section class="cta reveal">
@@ -355,6 +322,7 @@
       <h4>Empresa</h4>
       <ul>
         <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
         <li><a href="proyectos.html">Galería</a></li>
         <li><a href="mesas.html">Cotizador</a></li>
       </ul>
@@ -363,7 +331,6 @@
       <h4>Contacto</h4>
       <ul>
         <li><a href="https://wa.me/5491162055558" target="_blank">+54 9 11 6205-5558</a></li>
-        <li><a href="mailto:info@granrosado.com.ar">info@granrosado.com.ar</a></li>
         <li><a href="https://instagram.com/granrosado" target="_blank">Instagram</a></li>
       </ul>
     </div>
@@ -377,50 +344,21 @@
   </div>
 </footer>
 
+<a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!%20Quiero%20consultar." target="_blank" class="wa-float">
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Consultar</span>
+</a>
+
 <script>
-  // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
-
-  // Reveal
   const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 
-  // Cotizador preview
   const precios = {
-    micro: {
-      '120x80':374989,'130x80':389000,'140x80':402427,'150x80':412000,'160x80':420719,
-      '170x80':442000,'180x80':462791,'190x80':486000,'200x80':509070,'210x80':535000,
-      '220x80':559977,'230x80':588000,'240x80':615975,
-      '160x100':509070,'170x100':535000,'180x100':559977,'190x100':588000,'200x100':615974,
-      '210x100':647000,'220x100':677571,'230x100':711000,'240x100':745328,'250x100':783000,
-      '260x100':819861,
-      '180x120':677573,'190x120':711000,'200x120':745329,'210x120':783000,'220x120':819863,
-      '230x120':861000,'240x120':901849,'250x120':947000,'260x120':992034,'270x120':1042000,
-      '280x120':1091237,'290x120':1146000,'300x120':1200361
-    },
-    paraiso: {
-      '120x80':457652,'130x80':474000,'140x80':491139,'150x80':502000,'160x80':513463,
-      '170x80':539000,'180x80':564810,'190x80':593000,'200x80':621291,'210x80':652000,
-      '220x80':683420,'230x80':718000,'240x80':751762,
-      '160x100':621291,'170x100':652000,'180x100':683420,'190x100':718000,'200x100':751761,
-      '210x100':789000,'220x100':826937,'230x100':868000,'240x100':909630,'250x100':955000,
-      '260x100':1000593,
-      '180x120':826938,'190x120':868000,'200x120':909631,'210x120':955000,'220x120':1000595,
-      '230x120':1051000,'240x120':1100655,'250x120':1156000,'260x120':1210720,'270x120':1271000,
-      '280x120':1331792,'290x120':1398000,'300x120':1464971
-    },
-    pet: {
-      '120x80':553759,'130x80':574000,'140x80':594278,'150x80':608000,'160x80':621291,
-      '170x80':652000,'180x80':683420,'190x80':718000,'200x80':751762,'210x80':789000,
-      '220x80':826938,'230x80':868000,'240x80':909632,
-      '160x100':751762,'170x100':789000,'180x100':826938,'190x100':868000,'200x100':909630,
-      '210x100':955000,'220x100':1000593,'230x100':1051000,'240x100':1100653,'250x100':1156000,
-      '260x100':1210718,
-      '180x120':1000596,'190x120':1051000,'200x120':1100654,'210x120':1156000,'220x120':1210720,
-      '230x120':1271000,'240x120':1331792,'250x120':1398000,'260x120':1464971,'270x120':1538000,
-      '280x120':1611468,'290x120':1692000,'300x120':1772615
-    }
+    micro: {'120x80':374989,'130x80':389000,'140x80':402427,'150x80':412000,'160x80':420719,'170x80':442000,'180x80':462791,'190x80':486000,'200x80':509070,'210x80':535000,'220x80':559977,'230x80':588000,'240x80':615975,'160x100':509070,'170x100':535000,'180x100':559977,'190x100':588000,'200x100':615974,'210x100':647000,'220x100':677571,'230x100':711000,'240x100':745328,'250x100':783000,'260x100':819861,'180x120':677573,'190x120':711000,'200x120':745329,'210x120':783000,'220x120':819863,'230x120':861000,'240x120':901849,'250x120':947000,'260x120':992034,'270x120':1042000,'280x120':1091237,'290x120':1146000,'300x120':1200361},
+    paraiso: {'120x80':457652,'130x80':474000,'140x80':491139,'150x80':502000,'160x80':513463,'170x80':539000,'180x80':564810,'190x80':593000,'200x80':621291,'210x80':652000,'220x80':683420,'230x80':718000,'240x80':751762,'160x100':621291,'170x100':652000,'180x100':683420,'190x100':718000,'200x100':751761,'210x100':789000,'220x100':826937,'230x100':868000,'240x100':909630,'250x100':955000,'260x100':1000593,'180x120':826938,'190x120':868000,'200x120':909631,'210x120':955000,'220x120':1000595,'230x120':1051000,'240x120':1100655,'250x120':1156000,'260x120':1210720,'270x120':1271000,'280x120':1331792,'290x120':1398000,'300x120':1464971},
+    pet: {'120x80':553759,'130x80':574000,'140x80':594278,'150x80':608000,'160x80':621291,'170x80':652000,'180x80':683420,'190x80':718000,'200x80':751762,'210x80':789000,'220x80':826938,'230x80':868000,'240x80':909632,'160x100':751762,'170x100':789000,'180x100':826938,'190x100':868000,'200x100':909630,'210x100':955000,'220x100':1000593,'230x100':1051000,'240x100':1100653,'250x100':1156000,'260x100':1210718,'180x120':1000596,'190x120':1051000,'200x120':1100654,'210x120':1156000,'220x120':1210720,'230x120':1271000,'240x120':1331792,'250x120':1398000,'260x120':1464971,'270x120':1538000,'280x120':1611468,'290x120':1692000,'300x120':1772615}
   };
 
   let matActual = 'micro';
@@ -438,7 +376,6 @@
     document.getElementById('v-largo').textContent = largo + ' cm';
     document.getElementById('v-ancho').textContent = ancho + ' cm';
     const el = document.getElementById('precio-val');
-
     if (matActual === 'marmol') {
       const m2 = (parseInt(largo) * parseInt(ancho)) / 10000;
       const precioMarmol = Math.round(m2 * 700000 / 1000) * 1000;
@@ -453,14 +390,16 @@
       }
     }
   }
-
   calcular();
 </script>
-
-<!-- WhatsApp Flotante -->
-<a href="https://wa.me/5491162055558?text=Hola%20Gran%20Rosado!%20Quiero%20consultar." target="_blank" class="wa-float" id="wa-float">
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>Consultar</span>
-</a>
+<nav class="nav-mobile">
+  <a href="index.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>Inicio</a>
+  <a href="mesas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>Mesas</a>
+  <a href="sillas.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>Sillas</a>
+  <a href="medida.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>A Medida</a>
+  <a href="proyectos.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>Proyectos</a>
+  <a href="nosotros.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>Nosotros</a>
+  <a href="faqs.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>FAQs</a>
+</nav>
 </body>
 </html>
